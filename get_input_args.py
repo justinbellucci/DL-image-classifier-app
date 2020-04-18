@@ -4,6 +4,7 @@
 
 # Imports python modules
 import argparse
+import os
 
 def get_input_args():
     """ Function that retrieves the following 3 command line inputs 
@@ -26,9 +27,9 @@ def get_input_args():
     # Creates Argument Parser object named parser
     parser = argparse.ArgumentParser()   
     # Argument 1: Data directory path
-    parser.add_argument('--data_dir', type = str, default = './flowers', help = 'Path to master images folder')    
+    parser.add_argument('--data_dir', type = str, default = 'flowers', help = 'Path to master images folder')    
     # Argument 2: Checkpoint data directory path
-    parser.add_argument('--save_dir', type = str, default = './', help = 'Path to save model checkpoint')    
+    parser.add_argument('--save_dir', type = str, default = os.getcwd(), help = 'Path to save model checkpoint')    
     # Argument 3: Number of epochs 
     parser.add_argument('--epochs', type = int, default = 35, help = 'Epochs (int) for training')    
     # Argument 3: Number of epochs 
