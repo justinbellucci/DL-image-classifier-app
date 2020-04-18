@@ -63,7 +63,7 @@ def save_checkpoint(train_data, epochs, model, path):
     
     checkpoint = {'epochs': epochs,
                   'state_dict': model.state_dict(),
-                  'class_to_idx': model.class_to_idx()}
+                  'class_to_idx': model.class_to_idx}
 
     return torch.save(checkpoint, path)
 
