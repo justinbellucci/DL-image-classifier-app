@@ -1,4 +1,8 @@
-# Imports
+# PROGRAMMER: Justin Bellucci 
+# DATE CREATED: 04_18_2020                                  
+# REVISED DATE: 
+
+# Imports python modules
 import torch
 # import torch.nn.functional as F
 from torch import nn, optim
