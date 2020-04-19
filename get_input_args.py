@@ -52,7 +52,7 @@ def get_input_args():
     
     # Predicting Args --------------
     # Argument 1: Image path
-    parser.add_argument('--img_path', type = str, default = 'flower_data/test/8/image_07173', help = 'Path to flower image')
+    parser.add_argument('--img_path', type = str, default = 'assets/flower_data/test/102/image_08030.jpg', help = 'Path to flower image')
     # Argument 2: Checkpoint data directory path
     parser.add_argument('--chk_pt', type = str, default = 'modelcheckpoint.pth', help = 'Model checkpoint path')
     # Argument 3: Checkpoint data directory path
