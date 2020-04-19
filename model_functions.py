@@ -1,4 +1,8 @@
-# Imports
+# PROGRAMMER: Justin Bellucci 
+# DATE CREATED: 04_18_2020                                  
+# REVISED DATE: 04_19_2020
+
+# Imports python modules
 import torch
 from torchvision import datasets, transforms, models
 from classifier import Classifier
@@ -68,27 +72,27 @@ def save_checkpoint(train_data, epochs, model, path):
     return torch.save(checkpoint, path)
 
 ### ----------------------------------------------
-# def load_checkpoint(filepath):
-#     """Load a model checkpoint and rebuild model architecture
+def load_checkpoint(filepath):
+    """Load a model checkpoint and rebuild model architecture
     
-#        Arguments:
-#        - filepath (path to checkpoint.pth file)
+       Arguments:
+       - filepath (path to checkpoint.pth file)
        
-#        Output:
-#        - model (trained deep learning model)
-#        - class_dict (class_to_idx dictionary)
+       Output:
+       - model (trained deep learning model)
+       - class_dict (class_to_idx dictionary)
     
-#     """
-#     model = models.densenet121(pretrained=True)
-#     model.classifier = Classifier()
-# #     checkpoint = torch.load(filepath, map_location=("cuda" if torch.cuda.is_available() else "cpu"))
-#     checkpoint = torch.load(filepath)
-#     model.load_state_dict(checkpoint['state_dict'])
-#     model.class_to_idx = checkpoint['class_to_idx']
+    """
+    model = models.densenet121(pretrained=True)
+    model.classifier = Classifier()
+#     checkpoint = torch.load(filepath, map_location=("cuda" if torch.cuda.is_available() else "cpu"))
+    checkpoint = torch.load(filepath)
+    model.load_state_dict(checkpoint['state_dict'])
+    model.class_to_idx = checkpoint['class_to_idx']
     
-#     # Freeze the parameters so we dont backpropagate through them
-#     for param in model.parameters():
-#         param.requires_grad = False
+    # Freeze the parameters so we dont backpropagate through them
+    for param in model.parameters():
+        param.requires_grad = False
         
-#     return model
+    return model
     
