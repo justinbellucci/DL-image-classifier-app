@@ -7,7 +7,7 @@ from torchvision import models
 from workspace_utils import active_session
 # from PIL import Image
 
-import model_functions
+import model_functions 
 from classifier import Classifier
 from get_input_args import get_input_args
 
