@@ -7,7 +7,7 @@
 # python train.py --data_dir my_folder --save_dir checkpoint.pth --epochs 30 --learning_rate 0.001
 #
 # For predicting:
-# python predict.py --img_path my_img --chk_pt checkpoint.pth --cat_names cat_to_names.json
+# python predict.py --img_path my_img --chk_pt checkpoint.pth --cat_names cat_to_name.json
 #
 #
 # Imports python modules
@@ -56,7 +56,7 @@ def get_input_args():
     # Argument 2: Checkpoint data directory path
     parser.add_argument('--chk_pt', type = str, default = 'modelcheckpoint.pth', help = 'Model checkpoint path')
     # Argument 3: Checkpoint data directory path
-    parser.add_argument('--cat_names', type = str, default = 'cat_to_names.json', help = 'Category to names json file')
+    parser.add_argument('--cat_names', type = str, default = 'cat_to_name.json', help = 'Category to name json file')
     
     # Assign variable in_args to parse_args()
     in_args = parser.parse_args()
