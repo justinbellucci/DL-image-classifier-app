@@ -2,11 +2,11 @@
 
 Image classification application using Pytorch and Torchvision. This project was developed for Udacity's AI Programming with Python Nanodegree course. The provided code can be used in the following ways:
 
-1. Identify types of flowers using the pretrained netword on 102 flower classes
+1. Identify types of flowers using the pretrained network on 102 flower classes
 2. Train a network on your own set of data
 
 The project was split into two tasks:
-a. Build and train network to classify flowers in a IPython notebook. 
+a. Build and train a network to classify flowers in an IPython notebook. 
 b. Develop an application that can be run from the command line.
 
 ### Frameworks Used
@@ -37,7 +37,7 @@ Replace `my_folder` with the main directory that your image folders are in. The 
 The application supports using GPU for training purposes.
 
 ## Predict
-After you train your network use the `predict.py` app to make infernces on images the network has not seen. Example command line arguments:
+After you train your network use the `predict.py` app to make inferences on images the network has not seen. Example command line arguments:
 
 `python predict.py --img_path my_img --chk_pt checkpoint.pth --cat_names cat_to_names.json`
 
@@ -46,3 +46,5 @@ After you train your network use the `predict.py` app to make infernces on image
 `--chk_pt checkpoint.pth` - This is the checkpoint path file location. File must have .pth extension.
 
 `--cat_names cat_to_names.json` - Json file with the 102 categories to flower names, or other class/label combinations. 
+
+## Enjoy!
